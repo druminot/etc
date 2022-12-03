@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.1.1/jspdf.umd.min.js"></script>
+
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.1.3/minty/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>jQuery TableHTMLExport Plugin Examples</h1>
+      <table class="table" id="example">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Age</th>
+            <th scope="col">Subject</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>John</td>
+            <td>23</td>
+            <td>Computer Science</td>
+          </tr>
+          <tr>
+            <td>Jacob</td>
+            <td>24</td>
+            <td>Maths</td>
+          </tr>
+          <tr>
+            <td>Larry</td>
+            <td>32</td>
+            <td>Biology</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="lead">
+        <button id="json" class="btn btn-primary">TO JSON</button>
+        <button id="csv" class="btn btn-info">TO CSV</button>
+        <button id="pdf" class="btn btn-danger">TO PDF</button>
+        <button id="txt" class="btn btn-success">TO TXT</button>
+      </p>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.6/jspdf.plugin.autotable.min.js"></script>
+    <script src="./tableHTMLExport.js"></script>
+    <script>
+      $("#json").on("click", function () {
+        $("#example").tableHTMLExport({
+          type: "json",
+          filename: "sample.json",
+        });
+      });
+      $("#csv").on("click", function () {
+        $("#example").tableHTMLExport({ type: "csv", filename: "sample.csv" });
+      });
+      $("#pdf").on("click", function () {
+        $("#example").tableHTMLExport({ type: "pdf", filename: "sample.pdf" });
+      });
+      $("#txt").on("click", function () {
+        $("#example").tableHTMLExport({ type: "txt", filename: "sample.txt" });
+      });
+    </script>
+  </body>
+</html>

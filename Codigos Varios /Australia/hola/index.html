@@ -1,0 +1,163 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.1.1/jspdf.umd.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.1.1/jspdf.umd.min.js"></script>
+<script src="https://unpkg.com/jspdf@latest/dist/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.0.0/polyfills.umd.js"></script>
+
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Firebase Realtime Database - Client Side</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <main>
+
+
+
+
+
+    <form id="formulario" method="post" action="">
+
+
+
+
+
+        <label for="SiteAddres"> Site Address </label><br>
+        <input type="text" name="SiteAddres" id="SiteAddres"><br>
+
+        <label for="CustomerName"> Customer Name </label><br>
+        <input type="text" name="CustomerName" id="CustomerName"><br>
+<!-- modificar a lista -->
+
+
+
+
+
+      <label for="Selectanappliance">Selectanappliance</label> <br/>
+      <input   list="Selectanappliance" name="Selectanappliance">
+      <datalist id="Selectanappliance">
+      <option value="" selected="selected">- selecciona -</option>
+      <option value="Electric Oven">Electric Oven</option>
+      <option value="Electric Upright">Electric Upright</option>
+      <option value="Dual Fuel upright">Dual Fuel upright</option>
+      <option value="Electric Store">Electric Store</option>
+      <option value="Gas oven">Gas oven</option>
+      <option value="Gas Upright">Gas Upright</option>
+      <option value="Fixed Rangehoad">Fixed Rangehoad</option>
+      <option value="Slide-out Rangehoad">Slide-out Rangehoad</option>
+      <option value="Clothes Dryer">Clothes Dryer</option>
+      <option value="Refrigerator">Refrigerator</option>
+      <option value="Dishwasher">Dishwasher</option>
+      <option value="Air Condition">Air Condition</option>
+      </datalist>
+
+
+        <label for="ProductMake/Model"> Product Make / Model </label><br>
+        <input type="text" name="ProductMake/Model" id="ProductMake/Model"><br>
+
+        <label for="ProductMeasusements(depth)"> ProductMeasusements(depth) </label><br>
+        <input type="number" name="ProductMeasusements(depth)" id="ProductMeasusements(depth)"><br>
+
+        <label for="ProductMeasusements(Height)"> ProductMeasusements(Height) </label><br>
+        <input type="number" name="ProductMeasusements(Height)" id="ProductMeasusements(Height)"><br>
+
+        <label for="ProductMeasusements(width)"> ProductMeasusements(width) </label><br>
+        <input type="number" name="ProductMeasusements(width)" id="ProductMeasusements(width)"><br>
+
+
+
+
+
+
+        <label for="Cut-outMeasusements(depth)"> Cut-outMeasusements(depth) </label><br>
+        <input type="number" name="Cut-outMeasusements(depth)" id="Cut-outMeasusements(depth)"><br>
+
+        <label for="Cut-outMeasusements(Height)"> Cut-outMeasusements(Height) </label><br>
+        <input type="number" name="Cut-outMeasusements(Height)" id="Cut-outMeasusements(Height)"><br>
+
+        <label for="Cut-outMeasusements(width)"> Cut-outMeasusements(width) </label><br>
+        <input type="number" name="Cut-outMeasusements(width)" id="Cut-outMeasusements(width)"><br>
+
+
+
+        <label for="FaultDescription "> Fault Description (in datail) </label><br>
+        <input type="text" name="FaultDescription" id="FaultDescription"><br>
+
+
+        <label for="Cost">Cost (faulty items)</label><br>
+        <input type="number" name="Cost" id="Cost"><br>
+
+
+<!-- modificar a time automatico -->
+
+
+
+
+        <label for="GPS"> GPS </label><br>
+       <input type="number" name="GPS" id="GPS"><br>
+
+
+<!-- aqui ira la foto-->
+<progress value="0" max="100" id="uploader">0%</progress>
+       <label for="Photos"> Photos </label><br>
+       <input type="file" value="upload" id="fileButton"><br>
+
+       <progress value="0" max="100" id="uploader2">0%</progress>
+              <label for="Photos"> Photos </label><br>
+              <input type="file" value="upload" id="fileButton2"><br>
+
+              <progress value="0" max="100" id="uploader3">0%</progress>
+                     <label for="Photos"> Photos </label><br>
+                     <input type="file" value="upload" id="fileButton3"><br>
+
+
+
+
+        <button id="addBtn" class="btn waves-effect waves-light" >Add</button>
+    <!--   <button id="updateBtn" class="btn waves-effect waves-light">Update</button>  -->
+    <!--    <button id="removeBtn" class="btn waves-effect red darken-1">Remove</button>  -->
+
+
+<a href="pagina.html" target="_blank">Título del enlace</a>.
+
+
+
+    </form>
+  </main>
+
+
+
+
+
+
+
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-storage.js"></script>
+
+
+
+
+
+  <script src="./functions.js"></script>
+
+  <script src="jspdf.js"></script>
+	<script src="jquery-2.1.3.js"></script>
+  <script src="pdfFromHTML.js"></script>
+
+
+
+
+
+</body>
+</html>
